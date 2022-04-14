@@ -15,8 +15,8 @@ const
 //file path variables
 const files = {
   html  :  ['*.html'], 
-  scss  :  ['src/scss/style.scss', 'src/scss/**/*.scss', 'build/css/'],
-  js    :  ['src/js/script.js',    'src/js/**/*.js',     'build/js/' ]
+  scss  :  ['src/scss/style.scss', 'src/scss/**/*.scss', 'dist/css/'],
+  js    :  ['src/js/script.js',    'src/js/**/*.js',     'dist/js/' ]
 }
 
 
