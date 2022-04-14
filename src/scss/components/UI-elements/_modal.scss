@@ -1,0 +1,69 @@
+@use '../../sass-utils/mixins' as *;
+@use '../../sass-utils/functions' as *;
+
+.modal {
+  overflow: auto;
+  position: fixed;
+  background-color: rgba($color: #000000, $alpha: .5);
+  inset: 0;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 9999;
+  padding: 2rem;
+  display: none;
+  
+  &-content {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: #fff;
+    border-radius: .8rem;
+    text-align: center;
+    
+    @include view-below(sm) {
+      width: 98%;
+    }
+    i.fa-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.4rem;
+      font-size: clmp(2rem, 4rem);
+      color: var(--primary-clr);
+      cursor: pointer;
+    }
+
+    img {
+      width: 65%;
+      border-radius: 1rem;
+      margin: .7rem 0 2.5rem;
+      @include view-below(sm) {
+        width: 98%;
+      }
+    }
+
+    p {
+      width: 65%;
+      margin: 0 auto 3.5rem;
+      line-height: 1.6;
+      color: var(--sec-clr);
+      @include view-below(sm) {
+        width: 98%;
+      }
+    }
+
+    button {
+      padding: .5rem 1rem;
+      background-color: var(--primary-clr);
+      border-radius: .4rem;
+      color: #fff;
+      font-size: 1rem;
+      font-family: var(--body-ft);
+      font-weight: 400;
+    }
+  }
+}
+
+.modal-up {
+  overflow: hidden;
+}

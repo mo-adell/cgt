@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@700&display=swap');
+
+:root {
+  /*  C O L O R S  */
+  --primary-clr  :  #1ABC9C;
+  --sec-clr      :  #2C3E50;
+  --danger-clr   :  #DC3545;
+  --success-clr  :  #4BB543;
+
+  /*  F O N T S  */
+  --heading-ft : 'Montserrat', sans-serif;
+  --body-ft    : 'Lato', sans-serif;
+
+  /* S E C T I O N    P A D D I N G  */ 
+  --pd-desk : 6rem 0;
+}
+
+//Maps
+$breakpoints: (
+  // 600px
+  sm: 37.5rem,
+  // 768px
+  md: 48rem,
+  // 992px
+  lg: 62rem,
+  // 1200px
+  xlg: 75rem,
+);
+

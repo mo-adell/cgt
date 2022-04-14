@@ -1,0 +1,84 @@
+@use '../sass-utils/mixins' as *;
+@use '../sass-utils/functions' as *;
+
+.header {
+  padding: 2rem 5rem;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  @include view-below(xlg) {
+    padding: .6rem .9rem;
+  }
+
+  .container{
+    padding: .3rem 4rem;
+    @include flexbox(row, space-between, center);
+
+    @include view-below(xlg) {
+      padding: .5rem 0;
+    }
+    @include view-below(lg) {
+      flex-direction: column;
+    }
+  }
+
+  #menuToggle {
+    text-transform: uppercase;
+    padding: .9rem .8rem;
+    font-size: rem(12.8);
+    border-radius: .4rem;
+    cursor: pointer;
+    display: none;
+
+    @include view-below(lg) {
+      @include flexbox(row, center, flex-end, .3rem);
+    }
+  }
+
+  &__logo {
+    width: 100%;
+
+    a {
+      font-size: clmp(1.3rem, 1.6rem);
+      text-transform: uppercase;
+    }
+  }
+
+  &__nav {
+
+    @include view-above(lg) {
+      display: block !important;
+    }
+    @include view-below(lg) {
+      display: none;
+      width: 100%;
+      padding: 1.4rem 0 0;
+    }
+
+    &-list {
+      @include flexbox(row, center, center);
+
+      @include view-below(lg) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    
+    li {
+      padding: 0 1.3rem;
+
+      @include view-below(lg) {
+        padding: 1rem 0;
+      }
+      .link {
+        text-transform: uppercase;
+        transition: color 250ms ease-in-out;
+
+        &:hover {
+          color: var(--primary-clr);
+        }
+      }
+    }
+
+  }
+}

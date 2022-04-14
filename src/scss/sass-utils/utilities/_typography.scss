@@ -1,0 +1,63 @@
+@use '../functions' as *;
+
+/*  T Y P O G R A P H Y  */
+//colors
+.text-primary {
+  color: var(--primary-clr);
+}
+.text-secondary {
+  color: var(--secondary-clr);
+}
+.text-danger {
+  color: var(--danger-clr);
+}
+.text-success {
+  color: var(--success-clr);
+}
+.text-white {
+  color: #fff;
+}
+
+//position
+.text-center {
+  text-align: center;
+}
+.text-start {
+  text-align: left;
+}
+.text-end {
+  text-align: right;
+}
+
+//font families
+.ft-heading {
+  font-family: var(--heading-ft);
+}
+.ft-body {
+  font-family: var(--body-ft);
+}
+
+//font weights
+.ft-thin {
+  font-weight: 300;
+}
+.ft-regular {
+  font-weight: 400;
+}
+.ft-medium {
+  font-weight: 500;
+}
+.ft-bold {
+  font-weight: 700;
+}
+
+//font sizes
+.ft-sm {
+  font-size: 1rem;
+}
+.ft-md {
+  font-size: clmp(1rem, 2rem);
+}
+.ft-lg {
+  font-size: clmp(1rem, 3rem);
+}

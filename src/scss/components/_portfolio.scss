@@ -1,0 +1,48 @@
+@use '../sass-utils/mixins' as *;
+
+.portfolio {
+
+  .container {
+    @include view-above(sm) {
+      padding: 0 1rem;
+    }
+    @include view-above(xlg) {
+      padding: 0 6rem;
+    }
+  }
+  .item {
+    overflow: hidden;
+    position: relative;
+
+    &:hover .item__overlay {
+      opacity: 1;
+      display: flex;
+    }
+    &__img {
+      overflow: hidden;
+      border-radius: .5rem;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__overlay {
+      position: absolute;
+      inset: 0;
+      border-radius: .5rem;
+      background-color: rgba($color: #1ABC9C, $alpha: .8);
+      cursor: pointer;
+      @include flexbox(row, center, center);
+      opacity: 0;
+      transition: opacity 250ms ease-in-out;
+
+      i {
+        font-size: 4.5rem;
+        color: #fff;
+      }
+
+    }
+  }
+}
