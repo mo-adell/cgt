@@ -1,84 +1,77 @@
-@use '../sass-utils/mixins' as *;
 @use '../sass-utils/functions' as *;
+@use '../sass-utils/mixins' as *;
 
-.header {
-  padding: 2rem 5rem;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  @include view-below(xlg) {
-    padding: .6rem .9rem;
-  }
-
-  .container{
-    padding: .3rem 4rem;
-    @include flexbox(row, space-between, center);
-
-    @include view-below(xlg) {
-      padding: .5rem 0;
-    }
-    @include view-below(lg) {
-      flex-direction: column;
-    }
-  }
-
-  #menuToggle {
-    text-transform: uppercase;
-    padding: .9rem .8rem;
-    font-size: rem(12.8);
-    border-radius: .4rem;
-    cursor: pointer;
-    display: none;
-
-    @include view-below(lg) {
-      @include flexbox(row, center, flex-end, .3rem);
-    }
-  }
+/* N A V B A R   S T Y L E S */
+.navbar {
+  @include flexbox(row, space-between, center);
+  padding: rem(46) 1rem;
 
   &__logo {
-    width: 100%;
+    width: rem(90);
+  }
 
-    a {
-      font-size: clmp(1.3rem, 1.6rem);
-      text-transform: uppercase;
+  &__items {
+    @include flexbox(row, center, center, 3rem);
+  }
+  &-item {
+    font-family: tt-norms, sans-serif;
+    font-weight: 500;
+    color: var(--text-clr);
+    font-size: rem(20);
+
+    &--active {
+      &::after {
+        content: '';
+        background-color: var(--primary-clr);
+        display: block;
+        width: rem(28);
+        height: 2px;
+        margin-inline: auto;
+        position: relative;
+        top: rem(6);
+      }
     }
   }
 
-  &__nav {
+  &__user {
+    @include flexbox(row, center, center, .8rem);
 
-    @include view-above(lg) {
-      display: block !important;
+    img {
+      width: rem(37);
+      height: rem(37);
+      border-radius: 50%;
     }
-    @include view-below(lg) {
+
+    h2 {
+      font-family: tt-norms, sans-serif;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: rem(20);
+      color: var(--text-clr);
+    }
+  }
+
+  &--large {
+    @include view-below(sm) {
       display: none;
-      width: 100%;
-      padding: 1.4rem 0 0;
     }
+  }
 
-    &-list {
-      @include flexbox(row, center, center);
-
-      @include view-below(lg) {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
+  &--mobile {
+    display: none;
     
-    li {
-      padding: 0 1.3rem;
-
-      @include view-below(lg) {
-        padding: 1rem 0;
-      }
-      .link {
-        text-transform: uppercase;
-        transition: color 250ms ease-in-out;
-
-        &:hover {
-          color: var(--primary-clr);
-        }
-      }
+    .menu {
+      color: var(--primary-clr);
+      font-size: rem(18);
     }
+    .search {
+      color: var(--text-clr);
+      font-size: rem(18);
 
+    }
+    @include view-below(sm) {
+      @include flexbox(row, space-between, center);
+      width: 100%;
+    }
   }
 }

@@ -4,13 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="build/css/style.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="dist/css/style.css" />
     <title>coin goat</title>
   </head>
   <body>
     <main>
-      
+      <!-- N A V B A R -->
+      <nav class="navbar contained">
+        <a href="#" class="navbar__logo navbar--large">
+          <img src="dist/images/logo.png" alt="goat coin logo">
+        </a>
+
+        <div class="navbar--mobile">
+          <i class="fa-solid fa-bars menu"></i>
+          <i class="fa-solid fa-magnifying-glass search"></i>
+        </div>
+
+        <ul class="navbar__items navbar--large">
+          <a href="#" class="navbar-item"><li>Home</li></a>
+          <a href="#" class="navbar-item"><li>Search</li></a>
+          <a href="#" class="navbar-item navbar-item--active"><li>Wallet</li></a>
+        </ul>
+
+        <div class="navbar__user navbar--large">
+          <img src="dist/images/user2.png" alt="dan osmand profile image">
+          <h2>dan osmand</h2>
+        </div>
+      </nav>
+
+      <section>
+        
+      </section>
+
+      <i class="fa-solid fa-coins"></i>
+      <i class="fa-solid fa-address-card"></i>
+      <i class="fa-solid fa-circle-chevron-right"></i>
     </main>
+    <div class="overlay"></div>
 
     <script src="build/js/script.js"></script>
   </body>

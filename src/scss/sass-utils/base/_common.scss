@@ -1,13 +1,7 @@
-@use '../utilities/typography' as *;
+@use '../functions' as *;
 
-h1,h2,h3,h4,h5,h6,a {
-  @extend .ft-heading;
-}
-
-body,p,input {
-  @extend .ft-body;
-}
-
-.section {
-  padding: var(--pd-desk);
+.contained {
+  max-width: rem(1440);
+  padding: 0 1rem;
+  margin-inline: auto;
 }
