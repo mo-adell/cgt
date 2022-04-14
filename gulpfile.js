@@ -22,7 +22,7 @@ const files = {
 
 //scss to css task
 const scssMini = () => {
-  return gulp.src(files.scss[0], {sourcemaps: true })
+  return gulp.src(files.scss[0], {sourcemaps: false })
               .pipe(sass().on('error', sass.logError))
               .pipe(autoprefixer({overrideBrowserslist : ['last 2 versions']}))
               .pipe(concat('style.css'))
@@ -46,7 +46,7 @@ const watchScss = () => {
  
 //js task
 const js = () => {
-  return gulp.src(files.js[1], {sourcemaps: true })
+  return gulp.src(files.js[1], {sourcemaps: false })
               .pipe(concat('script.js'))
               // .pipe(terser())
             .pipe(gulp.dest(files.js[2], {sourcemaps: '.' }));
