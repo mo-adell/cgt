@@ -310,7 +310,7 @@ a {
 .cards__left .profile-content .btn--primary {
   color: #fff;
   background-color: var(--primary-clr);
-  margin-bottom: 5rem;
+  margin-bottom: 3.75rem;
 }
 @media (max-width: 37.5rem) {
   .cards__left .profile-content .btn--primary {
@@ -578,6 +578,11 @@ a {
 }
 .modal-text__address {
   margin-bottom: 0.5rem;
+}
+@media (max-width: 37.5rem) {
+  .modal-text__address {
+    display: none;
+  }
 }
 .modal-text h3, .modal-text p {
   margin-bottom: 1rem;

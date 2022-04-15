@@ -41,7 +41,7 @@
     padding: 1rem;
     font-family: tt-norms,sans-serif;
     color: var(--text-clr);
-    
+
     &__title {
       display: flex;
       justify-content: space-between;
@@ -59,6 +59,10 @@
 
     &__address {
       margin-bottom: .5rem;
+
+    @include view-below(sm) {
+      display: none;
+    }
     }
 
     h3,p {

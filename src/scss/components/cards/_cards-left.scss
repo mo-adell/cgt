@@ -10,7 +10,7 @@
   @include view-below(sm) {
     padding: rem(50) rem(60) rem(20);
   }
-
+  
   .profile-content {
     @include flexbox(column,center,center,1rem);
 
@@ -64,7 +64,7 @@
       &--primary {
         color: #fff;
         background-color: var(--primary-clr);
-        margin-bottom: rem(80);
+        margin-bottom: rem(60);
 
         @include view-below(sm) {
           margin-bottom: rem(59);
