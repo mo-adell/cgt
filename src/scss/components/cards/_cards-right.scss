@@ -67,7 +67,7 @@
       @include flexbox(row,space-between,flex-start,1rem);
       padding: rem(26) rem(20);
       position: relative;
-
+      cursor: pointer;
       @include view-below(sm) {
         width: 100%;
         &:not(:nth-child(1)){

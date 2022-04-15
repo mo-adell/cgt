@@ -432,6 +432,7 @@ a {
   gap: 1rem;
   padding: 1.625rem 1.25rem;
   position: relative;
+  cursor: pointer;
 }
 @media (max-width: 37.5rem) {
   .cards__right .card-container .cards-item {
@@ -526,10 +527,10 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
 }
 @media (max-width: 37.5rem) {
   .modal-content {
@@ -538,8 +539,63 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 0;
   }
 }
 .modal-image {
   max-width: 26.5rem;
+}
+.modal-image img {
+  width: 100%;
+}
+.modal-text {
+  padding: 1rem;
+  font-family: tt-norms, sans-serif;
+  color: var(--text-clr);
+}
+.modal-text__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+.modal-text__title h4 {
+  color: var(--primary-clr);
+  font-size: 1.125rem;
+}
+.modal-text__title .fa-heart {
+  color: var(--primary-clr);
+  margin-right: 0.2rem;
+}
+.modal-text__address {
+  margin-bottom: 0.5rem;
+}
+.modal-text h3, .modal-text p {
+  margin-bottom: 1rem;
+}
+.modal-text .btn {
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: var(--primary-clr);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.modal-stars {
+  margin-bottom: 1rem;
+}
+.modal-stars i {
+  color: #FFD203;
+  margin-right: 0.3rem;
 }
