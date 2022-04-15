@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="dist/css/style.css" />
     <title>coin goat</title>
   </head>
   <body>
+    <div class="overlay"></div>
+
     <main>
       <!-- N A V B A R -->
-      <nav class="navbar contained">
+      <nav class="navbar container">
         <a href="#" class="navbar__logo navbar--large">
-          <img src="dist/images/logo.png" alt="goat coin logo">
+          <img src="dist/images/logo.png" alt="goat coin logo" />
         </a>
 
         <div class="navbar--mobile">
@@ -24,25 +30,212 @@
         <ul class="navbar__items navbar--large">
           <a href="#" class="navbar-item"><li>Home</li></a>
           <a href="#" class="navbar-item"><li>Search</li></a>
-          <a href="#" class="navbar-item navbar-item--active"><li>Wallet</li></a>
+          <a href="#" class="navbar-item navbar-item--active"
+            ><li>Wallet</li></a
+          >
         </ul>
 
         <div class="navbar__user navbar--large">
-          <img src="dist/images/user2.png" alt="dan osmand profile image">
+          <img src="dist/images/user2.png" alt="dan osmand profile image" />
           <h2>dan osmand</h2>
         </div>
       </nav>
 
-      <section>
+      <!-- C A R D S    S E C T I O N -->
+      <section class="cards">
+        <div class="cards__left">
+          <div class="profile-content">
+            <img src="dist/images/user2.png" alt="user profile image" />
+            <h1>dan osmand</h1>
+            <h3>10,500</h3>
+            <a href="#" class="btn btn--white"
+              ><i class="fa-solid fa-coins"></i> Use My GC</a
+            >
+            <a href="#" class="btn btn--primary"
+              ><i class="fa-solid fa-address-card"></i> My Profile</a
+            >
+          </div>
+        </div>
 
+        <div class="cards__right">
+          <div class="card-container">
+            <h3>Punch Cards</h3>
+
+            <div class="cards">
+              <div class="cards-item">
+                <div class="cards-item__img">
+                  <img src="dist/images/user.png" alt="haircut image" />
+                </div>
+                <div class="cards-item__text">
+                  <h4>The Hair Club</h4>
+                  <p class="main-p">
+                    Complete all Punches to activate the promotion. Get 6
+                    Haircuts and 7th would be Free.
+                  </p>
+                  <div class="cards-item__circles">
+                    <span> </span><span> </span><span> </span><span> </span
+                    ><span> </span><span> </span>
+                  </div>
+                  <div class="cards-item__cost">
+                    <p>10 GC</p>
+                    <p>No Expirations</p>
+                  </div>
+                </div>
+                <i class="fa-solid fa-circle-chevron-right small"></i>
+              </div>
+
+              <div class="cards-item">
+                <div class="cards-item__img">
+                  <img src="dist/images/user.png" alt="haircut image" />
+                </div>
+                <div class="cards-item__text">
+                  <h4>The Hair Club</h4>
+                  <p class="main-p">
+                    Complete all Punches to activate the promotion. Get 6
+                    Haircuts and 7th would be Free.
+                  </p>
+                  <div class="cards-item__circles">
+                    <span class="circle--active"> </span
+                    ><span class="circle--active"> </span
+                    ><span class="circle--active"> </span
+                    ><span class="circle--active"> </span
+                    ><span class="circle--active"> </span
+                    ><span class="circle--active"> </span>
+                  </div>
+                  <div class="cards-item__cost">
+                    <p>10 GC</p>
+                    <p>No Expirations</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cards-item">
+                <div class="cards-item__img">
+                  <img src="dist/images/user.png" alt="haircut image" />
+                </div>
+                <div class="cards-item__text">
+                  <h4>The Hair Club</h4>
+                  <p class="main-p">
+                    Complete all Punches to activate the promotion. Get 6
+                    Haircuts and 7th would be Free.
+                  </p>
+                  <div class="cards-item__circles">
+                    <span class="circle--active"> </span
+                    ><span class="circle--active"> </span
+                    ><span class="circle--active"> </span
+                    ><span class="circle--active"> </span
+                    ><span class="circle--active"> </span><span> </span>
+                  </div>
+                  <div class="cards-item__cost">
+                    <p>10 GC</p>
+                    <p>No Expirations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <i class="fa-solid fa-circle-chevron-right large"></i>
+          </div>
+
+          <div class="card-container">
+            <h3>Saved Promotions</h3>
+
+            <div class="cards">
+              <div class="cards-item">
+                <div class="cards-item__img">
+                  <img src="dist/images/user.png" alt="haircut image" />
+                </div>
+                <div class="cards-item__text">
+                  <h4>The Hair Club</h4>
+                  <p class="main-p">
+                    Complete all Punches to activate the promotion. Get 6
+                    Haircuts and 7th would be Free.
+                  </p>
+                  <div class="cards-item__circles">
+                    <span> </span><span> </span><span> </span><span> </span
+                    ><span> </span><span> </span>
+                  </div>
+                  <div class="cards-item__cost">
+                    <p>10 GC</p>
+                    <p>No Expirations</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cards-item">
+                <div class="cards-item__img">
+                  <img src="dist/images/user.png" alt="haircut image" />
+                </div>
+                <div class="cards-item__text">
+                  <h4>The Hair Club</h4>
+                  <p class="main-p">
+                    Complete all Punches to activate the promotion. Get 6
+                    Haircuts and 7th would be Free.
+                  </p>
+                  <div class="cards-item__circles">
+                    <span> </span><span> </span><span> </span><span> </span
+                    ><span> </span><span> </span>
+                  </div>
+                  <div class="cards-item__cost">
+                    <p>10 GC</p>
+                    <p>No Expirations</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cards-item">
+                <div class="cards-item__img">
+                  <img src="dist/images/user.png" alt="haircut image" />
+                </div>
+                <div class="cards-item__text">
+                  <h4>The Hair Club</h4>
+                  <p class="main-p">
+                    Complete all Punches to activate the promotion. Get 6
+                    Haircuts and 7th would be Free.
+                  </p>
+                  <div class="cards-item__circles">
+                    <span> </span><span> </span><span> </span><span> </span
+                    ><span> </span><span> </span>
+                  </div>
+                  <div class="cards-item__cost">
+                    <p>10 GC</p>
+                    <p>No Expirations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <i class="fa-solid fa-circle-chevron-right large"></i>
+          </div>
+        </div>
       </section>
 
-      <!-- <i class="fa-solid fa-coins"></i>
-      <i class="fa-solid fa-address-card"></i>
-      <i class="fa-solid fa-circle-chevron-right"></i> -->
+      <!-- P O P U P -->
+      <section class="modal">
+        <div class="modal-content">
+          <div class="modal-image">
+            <img src="dist/images/user.png" alt="" />
+          </div>
+          <div class="modal-text">
+            <div class="modal-text__title">
+              <h4>The Hair Club</h4>
+              <span
+                ><i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </span>
+            </div>
+            <div class="modal-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              12
+            </div>
+            
+          </div>
+        </div>
+      </section>
     </main>
-    <div class="overlay"></div>
 
-    <script src="build/js/script.js"></script>
+    <script src="dist/js/script.js"></script>
   </body>
 </html>

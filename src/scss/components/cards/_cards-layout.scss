@@ -1,0 +1,14 @@
+@use '../../sass-utils/functions' as *;
+@use '../../sass-utils/mixins' as *;
+
+/* C A R D S   L A Y O U T */ 
+.cards {
+  @include flexbox(row,flex-start,center, 3rem);
+  max-width: rem(1640);
+  margin: 0 auto;
+  @include view-below(sm) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+  }
+}

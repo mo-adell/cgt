@@ -1,0 +1,10 @@
+/* B A C K G R O U N D   O V E R L A Y*/ 
+.overlay {
+  width: 100vw;
+  height: 70vh;
+  background-color: var(--primary-clr);
+  opacity: .16;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}

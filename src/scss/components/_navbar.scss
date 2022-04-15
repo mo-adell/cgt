@@ -4,7 +4,7 @@
 /* N A V B A R   S T Y L E S */
 .navbar {
   @include flexbox(row, space-between, center);
-  padding: rem(46) 1rem;
+  padding: rem(46) 2rem;
 
   &__logo {
     width: rem(90);

@@ -1,0 +1,79 @@
+@use '../../sass-utils/functions' as *;
+@use '../../sass-utils/mixins' as *;
+
+/* L E F T   C A R D */ 
+.cards__left {
+  background-color: #fff;
+  padding: rem(60) rem(50);
+  box-shadow: 1px 1px 10px var(--shadow-clr);
+  border-radius: 5px;
+  @include view-below(sm) {
+    padding: rem(50) rem(60) rem(20);
+  }
+
+  .profile-content {
+    @include flexbox(column,center,center,1rem);
+
+    img {
+      width: rem(197);
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    h1,h3 {
+      text-align: center;
+      font-family: tt-norms, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-clr);
+    }
+
+    h1 {
+      font-size: rem(30);
+    }
+    
+    h3 {
+      font-size: rem(40);
+      color: var(--primary-clr);
+      margin-bottom: rem(72);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: rem(19) rem(35);
+      font-family: tt-norms, sans-serif;
+      font-weight: 500;
+      font-size: clmp(1.2rem, 1.3rem);
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px var(--shadow-clr);
+
+      i {
+        font-size: rem(20);
+        padding-right: 10px;
+
+      }
+
+      &--white {
+        color: var(--primary-clr);
+        background-color: #fff;
+        i {
+          color: #000;
+        }
+      }
+
+      &--primary {
+        color: #fff;
+        background-color: var(--primary-clr);
+        margin-bottom: rem(80);
+
+        @include view-below(sm) {
+          margin-bottom: rem(59);
+          
+        }
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

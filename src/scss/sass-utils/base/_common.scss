@@ -1,7 +1,7 @@
 @use '../functions' as *;
 
-.contained {
-  max-width: rem(1440);
-  padding: 0 1rem;
-  margin-inline: auto;
+.container {
+  max-width: rem(1640);
+  padding: 0 2rem;
+  margin:0 auto;
 }

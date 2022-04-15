@@ -1,0 +1,141 @@
+@use '../../sass-utils/functions' as *;
+@use '../../sass-utils/mixins' as *;
+
+/* R I G H T   C A R D S */ 
+.cards__right {
+  align-self: flex-start;
+  @include flexbox(column, flex-start, space-between);
+  @include view-below(sm) {
+    width: 100%;
+  }
+  .card-container {
+    background-color: var(--cards-bg);
+    border-radius: 10px;
+    padding: rem(30) rem(28) rem(50);
+    position: relative;
+
+    &:nth-child(1) {
+      margin-bottom: rem(70);
+      @include view-below(sm) {
+        margin-bottom: rem(30);
+      }
+    }
+    
+    @include view-below(sm) {
+      width: 100%;
+      padding: rem(30) rem(10) rem(20);
+      &:nth-child(2) {
+        padding: 0 rem(10) 0;
+        background-color: transparent;
+
+        h3 {
+          display: none;
+        }
+      }
+    }
+
+    i.large {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(50%,-50%);
+      color: var(--primary-clr);
+      font-size: rem(34);
+
+      @include view-below(sm) {
+        display: none;
+      }
+    }
+    h3 {
+      font-family: tt-norms,sans-serif;
+      color: var(--primary-clr);
+      margin-bottom: rem(20);
+    }
+
+    .cards {
+      @include flexbox(row, space-between, center,1.4rem);
+      
+      @include view-below(sm) {
+        padding: 2rem;
+      }
+    }
+
+    .cards-item {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 1px 1px 10px var(--shadow-clr);
+      @include flexbox(row,space-between,flex-start,1rem);
+      padding: rem(26) rem(20);
+      position: relative;
+
+      @include view-below(sm) {
+        width: 100%;
+        &:not(:nth-child(1)){
+          display: none;
+        }
+      }
+
+      i.small {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%,-50%);
+        color: var(--primary-clr);
+        font-size: rem(24);
+
+        @include view-above(sm) {
+          display: none;
+        }
+      }
+      &__img {
+        width: clmp(7.5rem, 9rem);
+      }
+
+      &__text {
+        h4 {
+          font-size: clmp(.75rem, 1rem);
+          font-family: tt-norms,sans-serif;
+          color: var(--primary-clr);
+          font-weight: 400;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          color: var(--text-clr);
+          font-family: tt-norms,sans-serif;
+          font-size: .75rem;
+        }
+
+        .main-p {
+          max-width: rem(155);
+          margin-bottom: rem(22);
+        }
+      }
+
+      &__circles {
+        display: flex;
+        gap: rem(4);
+        margin-bottom: rem(10);
+
+        span {
+          width: .75rem;
+          height: .75rem;
+          background-color: var(--cards-bg);
+          border-radius: 50%;
+          border: 1px solid #707070;
+        }
+        .circle--active {
+          background-color: var(--primary-clr);
+          border: 1px solid var(--primary-clr);
+        }
+      }
+
+      &__cost {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+  }
+}
